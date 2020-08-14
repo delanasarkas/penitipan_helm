@@ -31,8 +31,8 @@
                                 <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password...">
                             </div>
                             <button type="button" class="btn btn-primary btn-block">Login</button>
-                            <button type="button" class="btn btn-success btn-block">Register</button>
-
+                            <a href ="konten/register.php" class="btn btn-success btn-block">Register </a>
+                            
                         </form>
                     </div>
                 </div>
