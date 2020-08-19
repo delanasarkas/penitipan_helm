@@ -19,7 +19,7 @@
   <script src="../assets/fontawesome.js" crossorigin="anonymous"></script>
 </head>
 
-<body id="page-top">
+<body class="bg-info">
   
 
   <!-- Page Wrapper -->
