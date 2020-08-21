@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Register </title>
         <link rel="stylesheet" href="../assets/bootstrap.css">
+        <link href="../image/logohero2.png" rel="shortcut icon"'>
     </head>
     <body class="bg-primary">
         <div class="container">

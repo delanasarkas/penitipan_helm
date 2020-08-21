@@ -16,6 +16,7 @@
 
   <!-- Custom styles for this template-->
   <link href="../assets/sb-admin-2.min.css" rel="stylesheet">
+  <link href="../image/logohero2.png" rel="shortcut icon"'>
   <script src="../assets/fontawesome.js" crossorigin="anonymous"></script>
 </head>
 
@@ -58,7 +59,14 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#">
            <i class="fas fa-server"></i>
-          <span>DATA PENITIPAN DAN PENGAMBILAN</span>
+          <span>DATA PENITIPAN </span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="fas fa-exchange-alt"></i>
+          <span>DATA PENGAMBILAN</span>
         </a>
       </li>
 
@@ -78,28 +86,6 @@
         </a>
 
       </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>PAGES</span>
-        </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="index.php">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
 
     </ul>
     <!-- End of Sidebar -->
