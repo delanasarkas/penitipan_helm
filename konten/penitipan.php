@@ -32,9 +32,9 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-15">
-        <i class="fas fa-server"></i>
+        <i class="fas fa-h-square"></i>
         </div>
-        <div class="sidebar-brand-text mx-3"> DATA PENITIPAN <sup>admin</sup></div>
+        <div class="sidebar-brand-text mx-3"> PT HERO SUPERMARKET TBK <sup>admin</sup></div>
       </a>
 
       <!-- Divider -->
@@ -43,8 +43,8 @@
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
         <a class="nav-link" href="index.php">
-        <i class="fas fa-h-square"></i>
-          <span> DATA PENITIPAN</span></a>
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span> Dashboard</span></a>
       </li>
 
       <!-- Divider -->
