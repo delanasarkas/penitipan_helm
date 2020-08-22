@@ -57,7 +57,7 @@
 
       <!-- Nav Item -DATA PENITIPAN DAN PENGAMBILAN  -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="penitipan.php">
            <i class="fas fa-server"></i>
           <span>DATA PENITIPAN </span>
         </a>
@@ -433,6 +433,8 @@
   <!-- Page level custom scripts -->
   <script src="../assets/chart-area-demo.js"></script>
   <script src="../assets/chart-pie-demo.js"></script>
+
+  
 
 </body>
 
