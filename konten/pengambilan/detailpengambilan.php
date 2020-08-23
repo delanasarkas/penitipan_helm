@@ -56,16 +56,17 @@
 
       </div>
 
-      <!-- Nav Item -DATA PENITIPAN DAN PENGAMBILAN  -->
+      <!-- Nav Item -DATA PENITIPAN  -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="penitipan.php">
+        <a class="nav-link collapsed" href="../penitipan/penitipan.php">
           <i class="fas fa-server"></i>
           <span>DATA PENITIPAN </span>
         </a>
       </li>
-
+        
+      <!-- Nav Item -DATA PENGAMBILAN  -->  
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="pengambilan.php">
           <i class="fas fa-exchange-alt"></i>
           <span>DATA PENGAMBILAN</span>
         </a>
@@ -229,60 +230,36 @@
 
           <!-- Page Data Penitipan,search,cetak report, Tambah Data -->
           <div class="d-sm-flex justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800 ">EDIT DATA PENITIPAN </h1>
+            <h1 class="h3 mb-0 text-gray-800 ">DETAIL DATA PENGAMBILAN </h1>
           </div>
 
           <!-- Page Table Penitipan -->
           <div class="row">
             <div class="col-lg-12">
-              <div class="card">
-                <div class="card-body">
-                  <form>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">NIK</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nik...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">NAMA</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nama...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">TANGGAL MASUK</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="Tanggal Masuk...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">JAM MASUK</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="Jam Masuk...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">NO LOKER</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="No Loker...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">MERK HELM</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Merk Helm...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">MERK KUNCI</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="Merk Kunci...">
-                    </div>
-                    <div class="form-group">
-                    <label for="exampleFormControlInput1">UPLOAD FOTO HELM</label>
-                    <div class="custom-file mb-3">
-                      <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                      <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                      <div class="invalid-feedback">Example invalid custom file feedback</div>
-                    </div>
-                    </div>
-                    <a href="../konten/penitipan.php" class="btn btn-primary btn-block">EDIT</a>
-                    <a href="penitipan.php" class="btn btn-danger btn-block">KEMBALI</a>
-
-                  </form>
-                </div>
+            <div class="card">
+              <div class="card-body">
+                <h4>NIK</h4>
+                <p>20192919292</p>
+                <h4>Nama</h4>
+                <p>Budi Agung</p>
+                <h4>Tanggal Masuk</h4>
+                <p>12/12/2020</p>
+                <h4>Jam Masuk</h4>
+                <p>12.00</p>
+                <h4>No loker</h4>
+                <p>1</p>
+                <h4>Jam Keluar</h4>
+                <p>17.00</p>
+                <h4>Barcode</h4>
+                <p>KYW002112</p>
+                <h4>Status</h4>
+                <p>Sedang Diambil</p>
+                <img src="../../image/gambarbarcode.png" class="rounded" width="30%">
+                <h4 class="mt-3">Gambar Helm Dan kunci Sepeda Motor</h4>
+                <img src="../../image/gambarhelmkunci.png" class="rounded" width="30%">
+                <a href="pengambilan.php" class="btn btn-danger btn-block mt-5">KEMBALI</a>
               </div>
+            </div>
             </div>
 
             <!-- Pie Chart -->

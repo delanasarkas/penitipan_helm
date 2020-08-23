@@ -229,7 +229,7 @@
 
           <!-- Page Data Penitipan,search,cetak report, Tambah Data -->
           <div class="d-sm-flex justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800 ">EDIT DATA PENITIPAN </h1>
+            <h1 class="h3 mb-0 text-gray-800 ">KONFIRMASI PENGAMBILAN </h1>
           </div>
 
           <!-- Page Table Penitipan -->
@@ -239,46 +239,10 @@
                 <div class="card-body">
                   <form>
                     <div class="form-group">
-                      <label for="exampleFormControlInput1">NIK</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nik...">
+                      <label for="exampleFormControlInput1">Kode Barcode</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Kode Barcode...">
                     </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">NAMA</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nama...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">TANGGAL MASUK</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="Tanggal Masuk...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">JAM MASUK</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="Jam Masuk...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">NO LOKER</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="No Loker...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">MERK HELM</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Merk Helm...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">MERK KUNCI</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="Merk Kunci...">
-                    </div>
-                    <div class="form-group">
-                    <label for="exampleFormControlInput1">UPLOAD FOTO HELM</label>
-                    <div class="custom-file mb-3">
-                      <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                      <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                      <div class="invalid-feedback">Example invalid custom file feedback</div>
-                    </div>
-                    </div>
-                    <a href="../konten/penitipan.php" class="btn btn-primary btn-block">EDIT</a>
-                    <a href="penitipan.php" class="btn btn-danger btn-block">KEMBALI</a>
+                    <a href="detailpengambilan.php" class="btn btn-success btn-block">KONFIRMASI</a>
 
                   </form>
                 </div>

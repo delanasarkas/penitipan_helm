@@ -9,20 +9,40 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>PT HERO SUPERMARKET TBK - Data Penitipan</title>
+  <title>PT HERO SUPERMARKET TBK - Data Pengambilan</title>
 
   <!-- Custom fonts for this template-->
-  <link href="../../../../assets/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../../assets/all.min.css" rel="stylesheet" type="text/css">
 
   <!-- Custom styles for this template-->
   <link href="../../assets/sb-admin-2.min.css" rel="stylesheet">
   <link href="../../assets/datatables/jquery.dataTables.min.css" rel="stylesheet">
+  <link href="../../assets/datatables/responsive.dataTables.min.css" rel="stylesheet">
   <link href="../../image/logohero2.png" rel="shortcut icon">
   <script src="../../assets/fontawesome.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-info">
-
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="exampleModalLabel">Hapus Data</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Yakin Hapus Data ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger">Hapus</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Page Wrapper -->
   <div id="wrapper">
@@ -56,22 +76,22 @@
 
       </div>
 
-      <!-- Nav Item -DATA PENITIPAN DAN PENGAMBILAN  -->
+      <!-- Nav Item -DATA PENITIPAN  -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="penitipan.php">
+        <a class="nav-link collapsed" href="../penitipan/penitipan.php">
           <i class="fas fa-server"></i>
           <span>DATA PENITIPAN </span>
         </a>
       </li>
-
+      <!-- Nav Item -DATA PENGAMBILAN  -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="pengambilan.php">
           <i class="fas fa-exchange-alt"></i>
           <span>DATA PENGAMBILAN</span>
         </a>
       </li>
 
-      <!-- Nav Item - laporan Data -->
+      <!-- Nav Item - LAPORAN DATA -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#">
           <i class="fas fa-chalkboard-teacher"></i>
@@ -227,62 +247,41 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Data Penitipan,search,cetak report, Tambah Data -->
+          <!-- Page Data Pengembalian, cetak report-->
           <div class="d-sm-flex justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800 ">EDIT DATA PENITIPAN </h1>
+            <h1 class="h3 mb-0 text-gray-800 "> DATA PENGAMBILAN </h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-sms btn-primary shadow-sm"
+              style="margin-right:-500px"><i class="fas fa-download fa-sm text-white-50"></i> Cetak Report</a>
+            <a href="konfirmasipengambilan.php" class="d-none d-sm-inline-block btn btn-sms btn-primary"><i
+                class="far fa-check-circle"></i> Konfirmasi Data</a>
           </div>
 
-          <!-- Page Table Penitipan -->
+          <!-- Page Table Pengambilan -->
           <div class="row">
             <div class="col-lg-12">
-              <div class="card">
-                <div class="card-body">
-                  <form>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">NIK</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nik...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">NAMA</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nama...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">TANGGAL MASUK</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="Tanggal Masuk...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">JAM MASUK</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="Jam Masuk...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">NO LOKER</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="No Loker...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">MERK HELM</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Merk Helm...">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">MERK KUNCI</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="Merk Kunci...">
-                    </div>
-                    <div class="form-group">
-                    <label for="exampleFormControlInput1">UPLOAD FOTO HELM</label>
-                    <div class="custom-file mb-3">
-                      <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                      <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                      <div class="invalid-feedback">Example invalid custom file feedback</div>
-                    </div>
-                    </div>
-                    <a href="../konten/penitipan.php" class="btn btn-primary btn-block">EDIT</a>
-                    <a href="penitipan.php" class="btn btn-danger btn-block">KEMBALI</a>
+              <table id="example" class="table nowrap table-bordered table-striped table-hover display"
+                style="width:100%; border: 1px solid black">
+                <thead class="bg-primary text-white text-center ">
+                  <tr>
+                    <th style="border:1px solid black">No</th>
+                    <th style="border:1px solid black">Kode Barcode</th>
+                    <th style="border:1px solid black">Status</th>
+                    <th style="border:1px solid black">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="border:1px solid black">1</td>
+                    <td style="border:1px solid black">KYW002112</td>
+                    <td style="border:1px solid black">Sudah Diambil</td>
+                    <td style="border:1px solid black">
 
-                  </form>
-                </div>
-              </div>
+                      <a href="#" class="btn btn-sms btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal"></i> Hapus</a>
+                      <a href="detailpengambilan.php" class="btn btn-sms btn-success btn-sm"></i> Detail</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
             <!-- Pie Chart -->
@@ -377,12 +376,14 @@
   <script src="../../assets/chart-area-demo.js"></script>
   <script src="../../assets/chart-pie-demo.js"></script>
   <script src="../../assets/datatables/jquery.dataTables.min.js"></script>
+  <script src="../../assets/datatables/dataTables.responsive.min.js"></script>
   <script>
     $(document).ready(function () {
       $('#example').DataTable({
         "order": [
           [3, "desc"]
-        ]
+        ],
+        responsive:true
       });
     });
   </script>

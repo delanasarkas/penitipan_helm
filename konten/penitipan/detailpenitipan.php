@@ -227,7 +227,7 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Data Penitipan,search,cetak report, Tambah Data -->
+          <!-- Page Data Detail Penitipan-->
           <div class="d-sm-flex justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800 ">DETAIL DATA PENITIPAN </h1>
           </div>
@@ -243,9 +243,14 @@
                 <p>Budi Agung</p>
                 <h4>Tanggal Masuk</h4>
                 <p>12/12/2020</p>
+                <h4>No Loker</h4>
+                <p>1</p>
                 <h4>Jam Masuk</h4>
                 <p>12:00</p>
                 <h4>Barcode</h4>
+                <p>KYW002112</p>
+                <h4>Status</h4>
+                <p>Sedang DiTitip</p>
                 <img src="../../image/gambarbarcode.png" class="rounded" width="30%">
                 <h4 class="mt-3">Gambar Helm Dan kunci Sepeda Motor</h4>
                 <img src="../../image/gambarhelmkunci.png" class="rounded" width="30%">

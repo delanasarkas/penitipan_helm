@@ -252,9 +252,9 @@
                         placeholder="Tanggal Masuk...">
                     </div>
                     <div class="form-group">
-                      <label for="exampleFormControlInput1">JUMLAH MASUK</label>
+                      <label for="exampleFormControlInput1">JAM MASUK</label>
                       <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="Jumlah Masuk...">
+                        placeholder="Jam Masuk...">
                     </div>
                     <div class="form-group">
                       <label for="exampleFormControlInput1">NO LOKER</label>
@@ -270,7 +270,7 @@
                         placeholder="Merk Kunci...">
                     </div>
                     <div class="form-group">
-                    <label for="exampleFormControlInput1">UPLOAD FOTO HELM</label>
+                    <label for="exampleFormControlInput1">UPLOAD FOTO HELM DAN KUNCI SEPEDA MOTOR</label>
                     <div class="custom-file mb-3">
                       <input type="file" class="custom-file-input" id="validatedCustomFile" required>
                       <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
