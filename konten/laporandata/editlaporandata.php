@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>PT HERO SUPERMARKET TBK - KONFIRMASI DATA</title>
+  <title>PT HERO SUPERMARKET TBK - EDIT LAPORAN DATA</title>
 
   <!-- Custom fonts for this template-->
   <link href="../../../../assets/all.min.css" rel="stylesheet" type="text/css">
@@ -56,7 +56,7 @@
 
       </div>
 
-      <!-- Nav Item -DATA PENITIPAN  -->
+      <!-- Nav Item -DATA PENITIPAN -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="../penitipan/penitipan.php">
           <i class="fas fa-server"></i>
@@ -71,9 +71,9 @@
           <span>DATA LOKER</span>
         </a>
 
-      <!-- Nav Item -DATA PENGAMBILAN  -->
+      <!-- Nav Item -DATA PENGAMBILAN -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pengambilan.php">
+        <a class="nav-link collapsed" href="../pengambilan/pengambilan.php">
           <i class="fas fa-exchange-alt"></i>
           <span>DATA PENGAMBILAN</span>
         </a>
@@ -81,7 +81,7 @@
 
       <!-- Nav Item - laporan Data -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="../laporandata/laporandata.php">
+        <a class="nav-link collapsed" href="laporandata.php">
           <i class="fas fa-chalkboard-teacher"></i>
           <span>LAPORAN DATA</span>
         </a>
@@ -89,7 +89,7 @@
 
       <!-- Nav Item - MANAGEMENT USER -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="../managementuser/managementuser.php">
           <i class="fas fa-book-open"></i>
           <span>MANAGEMENT USER</span>
         </a>
@@ -204,6 +204,29 @@
               </div>
             </li>
 
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                <i class="fas fa-user-cog"></i>
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+
           </ul>
 
         </nav>
@@ -212,22 +235,57 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Data Konfirmasi Pengambilan -->
+          <!-- Page Edit Laporan Data -->
           <div class="d-sm-flex justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800 ">KONFIRMASI PENGAMBILAN </h1>
+            <h1 class="h3 mb-0 text-gray-800 ">EDIT LAPORAN DATA </h1>
           </div>
 
-          <!-- Page Konfirmasi Pengambilan -->
+          <!-- Page Edit Laporan Data -->
           <div class="row">
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-body">
                   <form>
                     <div class="form-group">
-                      <label for="exampleFormControlInput1">Kode Barcode</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Kode Barcode...">
+                      <label for="exampleFormControlInput1">NIK</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nik...">
                     </div>
-                    <a href="detailpengambilan.php" class="btn btn-success btn-block">KONFIRMASI</a>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">NAMA</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nama...">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">TANGGAL MASUK</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Tanggal Masuk...">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">JAM MASUK</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Jam Masuk...">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">MERK HELM</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Merk Helm...">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">MERK KUNCI</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Merk Kunci...">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">JAM KELUAR</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Jam Keluar...">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">KODE BARCODE</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Kode Barcode...">
+                    </div>
+                    </div>
+                    </div>
+                    <a href="laporandata.php" class="btn btn-primary btn-block">EDIT</a>
+                    <a href="laporandata.php" class="btn btn-danger btn-block">KEMBALI</a>
 
                   </form>
                 </div>

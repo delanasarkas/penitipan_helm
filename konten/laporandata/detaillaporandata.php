@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>PT HERO SUPERMARKET TBK - KONFIRMASI DATA</title>
+  <title>PT HERO SUPERMARKET TBK - DETAIL LAPORAN DATA</title>
 
   <!-- Custom fonts for this template-->
   <link href="../../../../assets/all.min.css" rel="stylesheet" type="text/css">
@@ -71,9 +71,9 @@
           <span>DATA LOKER</span>
         </a>
 
-      <!-- Nav Item -DATA PENGAMBILAN  -->
+      <!-- Nav Item -DATA PEGAMBILAN  -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pengambilan.php">
+        <a class="nav-link collapsed" href="../pengambilan/pengambilan.php">
           <i class="fas fa-exchange-alt"></i>
           <span>DATA PENGAMBILAN</span>
         </a>
@@ -89,7 +89,7 @@
 
       <!-- Nav Item - MANAGEMENT USER -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="../managementuser/managementuser.php">
           <i class="fas fa-book-open"></i>
           <span>MANAGEMENT USER</span>
         </a>
@@ -153,8 +153,8 @@
               </div>
             </li>
 
-            <!-- Nav Item - Pesan Masuk -->
-            <li class="nav-item dropdown no-arrow mx-1">
+           <!-- Nav Item - Pesan Masuk -->
+           <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell fa-fw"></i>
@@ -204,6 +204,29 @@
               </div>
             </li>
 
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                <i class="fas fa-user-cog"></i>
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+
           </ul>
 
         </nav>
@@ -212,26 +235,40 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Data Konfirmasi Pengambilan -->
+          <!-- Page Data Detail Laporan Data-->
           <div class="d-sm-flex justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800 ">KONFIRMASI PENGAMBILAN </h1>
+            <h1 class="h3 mb-0 text-gray-800 ">DETAIL LAPORAN DATA </h1>
           </div>
 
-          <!-- Page Konfirmasi Pengambilan -->
+          <!-- Page Detail Laporan Data -->
           <div class="row">
             <div class="col-lg-12">
-              <div class="card">
-                <div class="card-body">
-                  <form>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">Kode Barcode</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Kode Barcode...">
-                    </div>
-                    <a href="detailpengambilan.php" class="btn btn-success btn-block">KONFIRMASI</a>
-
-                  </form>
-                </div>
+            <div class="card">
+              <div class="card-body">
+                <h4>NIK</h4>
+                <p>20192919292</p>
+                <h4>Nama</h4>
+                <p>Budi Agung</p>
+                <h4>Tanggal Masuk</h4>
+                <p>12/12/2020</p>
+                <h4>No Loker</h4>
+                <p>1</p>
+                <h4>Merk Helm</h4>
+                <p>Kyt</p>
+                <h4>Merk Kunci</h4>
+                <p>Vixion</p>
+                <h4>Jam Masuk</h4>
+                <p>12:00</p>
+                <h4>Jam Keluar</h4>
+                <p>17.00</p>
+                <h4>Barcode</h4>
+                <p>KYW002112</p>
+                <img src="../../image/gambarbarcode.png" class="rounded" width="30%">
+                <h4 class="mt-3">Gambar Helm Dan kunci Sepeda Motor</h4>
+                <img src="../../image/gambarhelmkunci.png" class="rounded" width="30%">
+                <a href="laporandata.php" class="btn btn-danger btn-block mt-5">KEMBALI</a>
               </div>
+            </div>
             </div>
 
             <!-- Pie Chart -->

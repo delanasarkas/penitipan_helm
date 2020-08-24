@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>PT HERO SUPERMARKET TBK - Data Penitipan</title>
+  <title>PT HERO SUPERMARKET TBK - DATA PENITIPAN</title>
 
   <!-- Custom fonts for this template-->
   <link href="../../../../assets/all.min.css" rel="stylesheet" type="text/css">
@@ -63,6 +63,13 @@
           <span>DATA PENITIPAN </span>
         </a>
       </li>
+
+      <!-- Nav Item - DATA LOKER -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="../loker/loker.php">
+        <i class="fas fa-door-closed"></i>
+          <span>DATA LOKER</span>
+        </a>
         
       <!-- Nav Item -DATA PENGAMBILAN  -->  
       <li class="nav-item">
@@ -146,19 +153,19 @@
               </div>
             </li>
 
-            <!-- Nav Item - Alerts -->
+            <!-- Nav Item - Pesan Masuk -->
             <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell fa-fw"></i>
-                <!-- Counter - Alerts -->
+                <!-- Counter - Pesan Masuk -->
                 <span class="badge badge-danger badge-counter">3+</span>
               </a>
-              <!-- Dropdown - Alerts -->
+              <!-- Dropdown - Pesan Masuk -->
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                 aria-labelledby="alertsDropdown">
                 <h6 class="dropdown-header">
-                  Alerts
+                  PESAN MASUK
                 </h6>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                   <div class="mr-3">
@@ -193,7 +200,7 @@
                     Barang Nisa Telah diambil
                   </div>
                 </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Pesan Masuk</a>
               </div>
             </li>
 
@@ -228,12 +235,12 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Data Penitipan,search,cetak report, Tambah Data -->
+          <!-- Page Data Detail Pengambilan -->
           <div class="d-sm-flex justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800 ">DETAIL DATA PENGAMBILAN </h1>
           </div>
 
-          <!-- Page Table Penitipan -->
+          <!-- Page Detail Pengambilan -->
           <div class="row">
             <div class="col-lg-12">
             <div class="card">

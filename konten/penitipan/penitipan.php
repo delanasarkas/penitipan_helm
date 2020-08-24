@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>PT HERO SUPERMARKET TBK - Data Penitipan</title>
+  <title>PT HERO SUPERMARKET TBK - DATA PENITIPAN</title>
 
   <!-- Custom fonts for this template-->
   <link href="../../assets/all.min.css" rel="stylesheet" type="text/css">
@@ -84,6 +84,14 @@
         </a>
       </li>
 
+      <!-- Nav Item - DATA LOKER -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="../loker/loker.php">
+        <i class="fas fa-door-closed"></i>
+          <span>DATA LOKER</span>
+        </a>
+
+      <!-- Nav Item -DATA PENGAMBILAN  -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="../pengambilan/pengambilan.php">
           <i class="fas fa-exchange-alt"></i>
@@ -93,7 +101,7 @@
 
       <!-- Nav Item - laporan Data -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="../laporandata/laporandata.php">
           <i class="fas fa-chalkboard-teacher"></i>
           <span>LAPORAN DATA</span>
         </a>
@@ -101,7 +109,7 @@
 
       <!-- Nav Item - MANAGEMENT USER -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="../managementuser/managementuser.php">
           <i class="fas fa-book-open"></i>
           <span>MANAGEMENT USER</span>
         </a>
@@ -165,19 +173,19 @@
               </div>
             </li>
 
-            <!-- Nav Item - Alerts -->
+            <!-- Nav Item - Pesan Masuk -->
             <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell fa-fw"></i>
-                <!-- Counter - Alerts -->
+                <!-- Counter - Pesan Masuk -->
                 <span class="badge badge-danger badge-counter">3+</span>
               </a>
-              <!-- Dropdown - Alerts -->
+              <!-- Dropdown - Pesan Masuk -->
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                 aria-labelledby="alertsDropdown">
                 <h6 class="dropdown-header">
-                  Alerts
+                  PESAN MASUK
                 </h6>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                   <div class="mr-3">
@@ -212,9 +220,9 @@
                     Barang Nisa Telah diambil
                   </div>
                 </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Pesan Masuk</a>
               </div>
-            </li>
+
 
             <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -246,7 +254,6 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-
           <!-- Page Data Penitipan,search,cetak report, Tambah Data -->
           <div class="d-sm-flex justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800 "> DATA PENITIPAN </h1>
@@ -266,6 +273,9 @@
                     <th style="border:1px solid black">No</th>
                     <th style="border:1px solid black">Nik</th>
                     <th style="border:1px solid black">Nama</th>
+                    <th style="border:1px solid black">Alamat</th>
+                    <th style="border:1px solid black">No.Tlp</th>
+                    <th style="border:1px solid black">Divisi Bagian</th>
                     <th style="border:1px solid black">Tanggal Masuk</th>
                     <th style="border:1px solid black">Jam Masuk</th>
                     <th style="border:1px solid black">Aksi</th>
@@ -276,6 +286,9 @@
                     <td style="border:1px solid black">1</td>
                     <td style="border:1px solid black">099984221</td>
                     <td style="border:1px solid black">Ramadan Satria</td>
+                    <td style="border:1px solid black">Jl.Kenari Raya</td>
+                    <td style="border:1px solid black">0888888</td>
+                    <td style="border:1px solid black">IT</td>
                     <td style="border:1px solid black">17-10-2020</td>
                     <td style="border:1px solid black">07.00</td>
                     <td style="border:1px solid black">

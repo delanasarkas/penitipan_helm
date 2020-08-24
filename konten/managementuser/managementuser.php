@@ -9,20 +9,40 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>PT HERO SUPERMARKET TBK - KONFIRMASI DATA</title>
+  <title>PT HERO SUPERMARKET TBK - MANAGEMENT USER</title>
 
   <!-- Custom fonts for this template-->
-  <link href="../../../../assets/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../../assets/all.min.css" rel="stylesheet" type="text/css">
 
   <!-- Custom styles for this template-->
   <link href="../../assets/sb-admin-2.min.css" rel="stylesheet">
   <link href="../../assets/datatables/jquery.dataTables.min.css" rel="stylesheet">
+  <link href="../../assets/datatables/responsive.dataTables.min.css" rel="stylesheet">
   <link href="../../image/logohero2.png" rel="shortcut icon">
   <script src="../../assets/fontawesome.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-info">
-
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="exampleModalLabel">Hapus Data</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Yakin Hapus Data ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger">Hapus</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Page Wrapper -->
   <div id="wrapper">
@@ -73,7 +93,7 @@
 
       <!-- Nav Item -DATA PENGAMBILAN  -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pengambilan.php">
+        <a class="nav-link collapsed" href="../pengambilan/pengambilan.php">
           <i class="fas fa-exchange-alt"></i>
           <span>DATA PENGAMBILAN</span>
         </a>
@@ -89,7 +109,7 @@
 
       <!-- Nav Item - MANAGEMENT USER -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="managementuser.php">
           <i class="fas fa-book-open"></i>
           <span>MANAGEMENT USER</span>
         </a>
@@ -153,8 +173,8 @@
               </div>
             </li>
 
-            <!-- Nav Item - Pesan Masuk -->
-            <li class="nav-item dropdown no-arrow mx-1">
+           <!-- Nav Item - Pesan Masuk -->
+           <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell fa-fw"></i>
@@ -204,6 +224,29 @@
               </div>
             </li>
 
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                <i class="fas fa-user-cog"></i>
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+
           </ul>
 
         </nav>
@@ -212,26 +255,46 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Data Konfirmasi Pengambilan -->
-          <div class="d-sm-flex justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800 ">KONFIRMASI PENGAMBILAN </h1>
+          <!-- Page Management User -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">MANAGEMENT USER</h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-sms btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Cetak Report</a>
           </div>
 
-          <!-- Page Konfirmasi Pengambilan -->
+
+          <!-- Page Table Managemenet User -->
           <div class="row">
             <div class="col-lg-12">
-              <div class="card">
-                <div class="card-body">
-                  <form>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">Kode Barcode</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Kode Barcode...">
-                    </div>
-                    <a href="detailpengambilan.php" class="btn btn-success btn-block">KONFIRMASI</a>
+              <table id="example" class="table nowrap table-bordered table-striped table-hover display"
+                style="width:100%; border: 1px solid black">
+                <thead class="bg-primary text-white text-center ">
+                  <tr>
+                    <th style="border:1px solid black">No</th>
+                    <th style="border:1px solid black">Nik</th>
+                    <th style="border:1px solid black">Nama</th>
+                    <th style="border:1px solid black">Alamat</th>
+                    <th style="border:1px solid black">No.Tlp</th>
+                    <th style="border:1px solid black">Divisi Bagian</th>
+                    <th style="border:1px solid black">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="border:1px solid black">1</td>
+                    <td style="border:1px solid black">099984221</td>
+                    <td style="border:1px solid black">Ramadan Satria</td>
+                    <td style="border:1px solid black">Jl.Kenari Raya</td>
+                    <td style="border:1px solid black">088888844</td>
+                    <td style="border:1px solid black">IT</td>
+                    <td style="border:1px solid black">
 
-                  </form>
-                </div>
-              </div>
+                      <a href="editmanagementuser.php" class="btn btn-sms btn-primary btn-sm"></i> Edit</a>
+                      <a href="#" class="btn btn-sms btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal"></i> Hapus</a>
+                      <a href="detailmanagementuser.php" class="btn btn-sms btn-success btn-sm"></i> Detail</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
             <!-- Pie Chart -->
@@ -326,12 +389,14 @@
   <script src="../../assets/chart-area-demo.js"></script>
   <script src="../../assets/chart-pie-demo.js"></script>
   <script src="../../assets/datatables/jquery.dataTables.min.js"></script>
+  <script src="../../assets/datatables/dataTables.responsive.min.js"></script>
   <script>
     $(document).ready(function () {
       $('#example').DataTable({
         "order": [
           [3, "desc"]
-        ]
+        ],
+        responsive:true
       });
     });
   </script>
