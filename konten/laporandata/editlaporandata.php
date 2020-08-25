@@ -255,6 +255,18 @@
                       <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nama...">
                     </div>
                     <div class="form-group">
+                      <label for="exampleFormControlInput1">ALAMAT</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Alamat...">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">NO.TLP</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="No.Tlp...">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">DIVISI BAGIAN</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Divisi Bagian...">
+                    </div>
+                    <div class="form-group">
                       <label for="exampleFormControlInput1">TANGGAL MASUK</label>
                       <input type="email" class="form-control" id="exampleFormControlInput1"
                         placeholder="Tanggal Masuk...">

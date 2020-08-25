@@ -235,7 +235,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="../profile/profile.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
@@ -274,6 +274,9 @@
                     <th style="border:1px solid black">No</th>
                     <th style="border:1px solid black">Nik</th>
                     <th style="border:1px solid black">Nama</th>
+                    <th style="border:1px solid black">Alamat</th>
+                    <th style="border:1px solid black">No.Tlp</th>
+                    <th style="border:1px solid black">Divisi Bagian</th>
                     <th style="border:1px solid black">Tanggal Masuk</th>
                     <th style="border:1px solid black">Jam Masuk</th>
                     <th style="border:1px solid black">Merk Helm</th>
@@ -288,6 +291,9 @@
                     <td style="border:1px solid black">1</td>
                     <td style="border:1px solid black">099984221</td>
                     <td style="border:1px solid black">Ramadan</td>
+                    <td style="border:1px solid black">Jl.Kenari Raya</td>
+                    <td style="border:1px solid black">088899842</td>
+                    <td style="border:1px solid black">IT</td>
                     <td style="border:1px solid black">17-10-2020</td>
                     <td style="border:1px solid black">7.00</td>
                     <td style="border:1px solid black">Kyt</td>
@@ -374,7 +380,7 @@
         <div class="modal-body">"APAKAH ANDA YAKIN MAU LOGOUT ?" </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="../../index.php">Logout</a>
         </div>
       </div>
     </div>

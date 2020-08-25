@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>PT HERO SUPERMARKET TBK - KONFIRMASI DATA</title>
+  <title>PT HERO SUPERMARKET TBK - EDIT PROFILE</title>
 
   <!-- Custom fonts for this template-->
   <link href="../../../../assets/all.min.css" rel="stylesheet" type="text/css">
@@ -56,14 +56,14 @@
 
       </div>
 
-      <!-- Nav Item -DATA PENITIPAN  -->
+      <!-- Nav Item -DATA PENITIPAN -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="../penitipan/penitipan.php">
           <i class="fas fa-server"></i>
           <span>DATA PENITIPAN </span>
         </a>
       </li>
-
+      
       <!-- Nav Item - DATA LOKER -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="../loker/loker.php">
@@ -71,9 +71,9 @@
           <span>DATA LOKER</span>
         </a>
 
-      <!-- Nav Item -DATA PENGAMBILAN  -->
+      <!-- Nav Item -DATA PENGAMBILAN -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pengambilan.php">
+        <a class="nav-link collapsed" href="../pengambilan/pengambilan.php">
           <i class="fas fa-exchange-alt"></i>
           <span>DATA PENGAMBILAN</span>
         </a>
@@ -204,6 +204,7 @@
               </div>
             </li>
 
+
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->
@@ -215,7 +216,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="../profile/profile.php">
+                <a class="dropdown-item" href="profile.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
@@ -235,24 +236,46 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Data Konfirmasi Pengambilan -->
+          <!-- Page Edit Profile -->
           <div class="d-sm-flex justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800 ">KONFIRMASI PENGAMBILAN </h1>
+            <h1 class="h3 mb-0 text-gray-800 ">EDIT PROFILE </h1>
           </div>
 
-          <!-- Page Konfirmasi Pengambilan -->
+          <!-- Page Edit PROFILE -->
           <div class="row">
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-body">
-                  <form>
+                <form>
                     <div class="form-group">
-                      <label for="exampleFormControlInput1">Kode Barcode</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Kode Barcode...">
+                      <label for="exampleFormControlInput1">NIK</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nik...">
                     </div>
-                    <a href="detailpengambilan.php" class="btn btn-success btn-block">KONFIRMASI</a>
-
-                  </form>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">NAMA</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nama...">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">TANGGAL LAHIR</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Tanggal Lahir...">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">ALAMAT</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Alamat...">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">NO.TLP</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="No.Tlp...">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">DIVISI BAGIAN</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Divisi Bagian...">
+                    </div>
+                
+                <a href="profile.php" class="btn btn-sms btn-primary btn-sm"></i> EDIT</a>
+                <a href="profile.php" class="btn btn-sms btn-dark btn-sm"></i> KEMBALI</a>
+                
+                </form>
                 </div>
               </div>
             </div>

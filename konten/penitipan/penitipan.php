@@ -235,7 +235,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="../profile/profile.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
@@ -278,6 +278,7 @@
                     <th style="border:1px solid black">Divisi Bagian</th>
                     <th style="border:1px solid black">Tanggal Masuk</th>
                     <th style="border:1px solid black">Jam Masuk</th>
+                    <td style="border:1px solid black">Status</td>
                     <th style="border:1px solid black">Aksi</th>
                   </tr>
                 </thead>
@@ -291,6 +292,7 @@
                     <td style="border:1px solid black">IT</td>
                     <td style="border:1px solid black">17-10-2020</td>
                     <td style="border:1px solid black">07.00</td>
+                    <td style="border:1px solid black">Sedang dititip</td>
                     <td style="border:1px solid black">
 
                       <a href="editpenitipan.php" class="btn btn-sms btn-primary btn-sm"></i> Edit</a>
@@ -371,7 +373,7 @@
         <div class="modal-body">"APAKAH ANDA YAKIN MAU LOGOUT ?" </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="../../index.php">Logout</a>
         </div>
       </div>
     </div>

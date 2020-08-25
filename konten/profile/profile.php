@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>PT HERO SUPERMARKET TBK - KONFIRMASI DATA</title>
+  <title>PT HERO SUPERMARKET TBK - PROFILE </title>
 
   <!-- Custom fonts for this template-->
   <link href="../../../../assets/all.min.css" rel="stylesheet" type="text/css">
@@ -56,7 +56,7 @@
 
       </div>
 
-      <!-- Nav Item -DATA PENITIPAN  -->
+      <!-- Nav Item -DATA PENITIPAN -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="../penitipan/penitipan.php">
           <i class="fas fa-server"></i>
@@ -71,9 +71,10 @@
           <span>DATA LOKER</span>
         </a>
 
-      <!-- Nav Item -DATA PENGAMBILAN  -->
+
+      <!-- Nav Item -DATA PENGAMBILAN -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pengambilan.php">
+        <a class="nav-link collapsed" href="../pengambilan/pengambilan.php">
           <i class="fas fa-exchange-alt"></i>
           <span>DATA PENGAMBILAN</span>
         </a>
@@ -153,8 +154,8 @@
               </div>
             </li>
 
-            <!-- Nav Item - Pesan Masuk -->
-            <li class="nav-item dropdown no-arrow mx-1">
+           <!-- Nav Item - Pesan Masuk -->
+           <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell fa-fw"></i>
@@ -204,6 +205,7 @@
               </div>
             </li>
 
+
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->
@@ -215,7 +217,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="../profile/profile.php">
+                <a class="dropdown-item" href="profile.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
@@ -235,26 +237,33 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Data Konfirmasi Pengambilan -->
+          <!-- Page Data Profile-->
           <div class="d-sm-flex justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800 ">KONFIRMASI PENGAMBILAN </h1>
+            <h1 class="h3 mb-0 text-gray-800 ">DATA PROFILE  </h1>
           </div>
 
-          <!-- Page Konfirmasi Pengambilan -->
+          <!-- Page Data Profile -->
           <div class="row">
             <div class="col-lg-12">
-              <div class="card">
-                <div class="card-body">
-                  <form>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">Kode Barcode</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Kode Barcode...">
-                    </div>
-                    <a href="detailpengambilan.php" class="btn btn-success btn-block">KONFIRMASI</a>
-
-                  </form>
-                </div>
+            <div class="card">
+              <div class="card-body">
+                <h4>NIK</h4>
+                <p>20192919292</p>
+                <h4>NAMA</h4>
+                <p>RAMADAN SATRIA</p>
+                <h4>TANGGAL LAHIR</h4>
+                <p>17/08/1998</p>
+                <h4>ALAMAT</h4>
+                <p>Jl.Kenari Raya</p>
+                <h4>No.Tlp</h4>
+                <p>0882183213</p>
+                <h4>Divisi Bagian</h4>
+                <p>IT</p>
+                
+                <a href="editprofile.php" class="btn btn-sms btn-primary btn-sm"></i> EDIT PROFILE</a>      
+                <a href="gantipassword.php" class="btn btn-sms btn-danger btn-sm"></i> GANTI PASSWORD</a>
               </div>
+            </div>
             </div>
 
             <!-- Pie Chart -->

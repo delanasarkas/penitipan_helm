@@ -215,7 +215,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="../profile/profile.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
@@ -249,6 +249,12 @@
                 <p>20192919292</p>
                 <h4>Nama</h4>
                 <p>Budi Agung</p>
+                <h4>Alamat</h4>
+                <p>Jl.Kenari Raya</p>
+                <h4>No.Tlp</h4>
+                <p>0882183213</p>
+                <h4>Divisi Bagian</h4>
+                <p>IT</p>
                 <h4>Tanggal Masuk</h4>
                 <p>12/12/2020</p>
                 <h4>No Loker</h4>
@@ -340,7 +346,7 @@
         <div class="modal-body">"APAKAH ANDA YAKIN MAU LOGOUT ?" </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="../../index.php">Logout</a>
         </div>
       </div>
     </div>

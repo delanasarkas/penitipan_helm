@@ -216,7 +216,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="../profile/profile.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
@@ -236,12 +236,12 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Data Penitipan,search,cetak report, Tambah Data -->
+          <!-- Page Edit Data Penitipan -->
           <div class="d-sm-flex justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800 ">EDIT DATA PENITIPAN </h1>
           </div>
 
-          <!-- Page Table Penitipan -->
+          <!-- Page Edit Data Penitipan -->
           <div class="row">
             <div class="col-lg-12">
               <div class="card">
@@ -254,6 +254,18 @@
                     <div class="form-group">
                       <label for="exampleFormControlInput1">NAMA</label>
                       <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nama...">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">ALAMAT</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Alamat...">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">NO.TLP</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="No.Tlp...">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">DIVISI BAGIAN</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Divisi Bagian...">
                     </div>
                     <div class="form-group">
                       <label for="exampleFormControlInput1">TANGGAL MASUK</label>
@@ -363,7 +375,7 @@
         <div class="modal-body">"APAKAH ANDA YAKIN MAU LOGOUT ?" </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="../../login.php">Logout</a>
         </div>
       </div>
     </div>

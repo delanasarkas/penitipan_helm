@@ -74,7 +74,7 @@
 
       <!-- Nav Item -DATA PENGAMBILAN -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="../pengambilan/pengambilan.php">
           <i class="fas fa-exchange-alt"></i>
           <span>DATA PENGAMBILAN</span>
         </a>
@@ -82,7 +82,7 @@
 
       <!-- Nav Item - laporan Data -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="../laporandata/laporandata.php">
           <i class="fas fa-chalkboard-teacher"></i>
           <span>LAPORAN DATA</span>
         </a>
@@ -90,7 +90,7 @@
 
       <!-- Nav Item - MANAGEMENT USER -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="../managemen">
           <i class="fas fa-book-open"></i>
           <span>MANAGEMENT USER</span>
         </a>
@@ -217,7 +217,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="../profile/profile.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
@@ -251,16 +251,22 @@
                 <p>20192919292</p>
                 <h4>Nama</h4>
                 <p>Budi Agung</p>
+                <h4>Alamat</h4>
+                <p>Jl.Kenari Raya</p>
+                <h4>No.Tlp</h4>
+                <p>0882183213</p>
+                <h4>Divisi Bagian</h4>
+                <p>IT</p>
                 <h4>Tanggal Masuk</h4>
-                <p>12/12/2020</p>
-                <h4>No Loker</h4>
-                <p>1</p>
+                <p>12/12/2020</p>               
                 <h4>Jam Masuk</h4>
                 <p>12:00</p>
-                <h4>Barcode</h4>
-                <p>KYW002112</p>
+                <h4>No Loker</h4>
+                <p>1</p>
                 <h4>Status</h4>
                 <p>Sedang DiTitip</p>
+                <h4>Barcode</h4>
+                <p>KYW002112</p>
                 <img src="../../image/gambarbarcode.png" class="rounded" width="30%">
                 <h4 class="mt-3">Gambar Helm Dan kunci Sepeda Motor</h4>
                 <img src="../../image/gambarhelmkunci.png" class="rounded" width="30%">
