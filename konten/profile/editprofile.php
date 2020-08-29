@@ -248,7 +248,7 @@
                 <div class="card-body">
                 <form>
                     <div class="form-group">
-                      <label for="exampleFormControlInput1">NIK</label>
+                      <label for="exampleFormControlInput1w">NIK</label>
                       <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nik...">
                     </div>
                     <div class="form-group">
