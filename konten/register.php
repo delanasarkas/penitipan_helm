@@ -1,5 +1,19 @@
     <?php
 
+    include("../koneksi/koneksi.php");
+
+    if(isset($_POST['save'])){
+        $nik = htmlspecialchars($_POST['nik']);
+        $nama = htmlspecialchars($_POST['nama']);
+        $password = htmlspecialchars($_POST['password']);
+        $divisi_bagian = htmlspecialchars($_POST['divisi_bagian']);
+        $alamat = htmlspecialchars($_POST['alamat']);
+        $no_tlp = htmlspecialchars($_POST['no_tlp']);
+
+        $result = mysqli_query($con, "INSERT INTO tbl_user (nik, nama, password, divisi_bagian, alamat, no_tlp, level ) VALUES ('$nik','$nama','$password','$divisi_bagian','$alamat','$no_tlp','$level)");
+        echo "<script>alert('Data Tersimpan');window.location.href = '../index.php';</script>";
+    }
+
     ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -22,20 +36,32 @@
                                 &copy; Aplikasi Penitipan Barang 2020
                             </p>
                             <hr>
-                            <form>
+                            <form action="" method="POST" autocomplete="off">
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Nik</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nik...">
+                                    <input type="nik" class="form-control" id="exampleFormControlInput1" placeholder="Nik..." name="nik" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleFormControlInput1">Username</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Username...">
+                                    <label for="nama">Username</label>
+                                    <input type="text" class="form-control" id="nama" placeholder="Username..." name="nama" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleFormControlInput1">Password</label>
-                                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password...">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password..." name="password" required>
                                 </div>
-                                <button type="button" class="btn btn-success btn-block">Register</button>
+                                <div class="form-group">
+                                    <label for="divisi_bagian">Divisi Bagian</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Divisi Bagian..." name="divisi_bagian" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="alamat">Alamat</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alamat..." name="alamat" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="no_tlp">No Telephon</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="No Telephon..." name="no_tlp" required>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-block" name="save" >Register</button>
                                 <a href="../index.php" class="btn btn-dark btn-block">Back</a>
                                 
                             </form>

@@ -1,5 +1,50 @@
 <?php
 
+
+include("koneksi/koneksi.php");
+
+//VariableValidasi
+$errornama = "";
+$errorPassword = "";
+$errorData = "";
+
+//Submit
+if(isset($_POST['login'])){
+	$nama = htmlspecialchars($_POST['nama']);
+	$password = htmlspecialchars(md5($_POST['password']));
+	
+	//ValidasiInput
+	if(empty($nama) || empty($password)){
+		$errornama = "Email tidak boleh kosong";
+		$errorPassword = "Password tidak boleh kosong";
+	}else if(!empty($nama) && !empty($password) && !filter_var($nama, FILTER_VALIDATE_EMAIL)){
+		$errornama = "Format harus nama";
+	}else{
+		$result = mysqli_query($con, "SELECT * FROM ramadan WHERE tbl_user='$nama' AND password='$password'");
+		$count = mysqli_num_rows($result);
+		
+		if($count > 0){
+			$data = mysqli_fetch_assoc($result);
+			
+			if($data['role'] == 'admin'){
+				$_SESSION['nama'] = $nama;
+				$_SESSION['role'] = "admin";
+				
+				echo "<script>alert('sukses');window.location.href = konten/dashboard.php';</script>";
+			}else if($data['role'] == 'user'){
+				$_SESSION['nama'] = $nama;
+				$_SESSION['role'] = "user";
+				
+				echo "<script>alert('gagal');window.location.href = 'konten/dashboard.php';</script>";
+			}else{
+				header("location.index.php?pesan=Gagal");
+			}
+		}else{
+			$errorData = "Data tidak terdaftar";
+		}
+	}
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,16 +67,20 @@
                             &copy; Aplikasi Penitipan Barang 2020
                         </p>
                         <hr>
-                        <form>
+                        <form action="" method="POST" >
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Username</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Username...">
+                                <input type="text" class="form-control" id="exampleFormControlInput1" 
+                                placeholder="Username..." name="nama" >
+                                <span><?= $errornama; ?></span>
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Password</label>
-                                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password...">
+                                <input type="password" class="form-control" 
+                                id="exampleFormControlInput1" placeholder="Password..." name="password">
+                                <span><?= $errorPassword; ?></span>
                             </div>
-                            <button type="button" class="btn btn-primary btn-block">Login</button>
+                            <button type="button" class="btn btn-primary btn-block" name="login">Login</button>
                             <a href ="konten/register.php" class="btn btn-success btn-block">Register </a>
                             
                         </form>
