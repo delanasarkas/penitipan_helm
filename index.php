@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 
 include("koneksi/koneksi.php");
 
@@ -15,32 +16,44 @@ if(isset($_POST['login'])){
 	
 	//ValidasiInput
 	if(empty($nama) || empty($password)){
-		$errornama = "Email tidak boleh kosong";
-		$errorPassword = "Password tidak boleh kosong";
-	}else if(!empty($nama) && !empty($password) && !filter_var($nama, FILTER_VALIDATE_EMAIL)){
-		$errornama = "Format harus nama";
+		$errornama = "<div class='alert alert-danger' role='alert'>
+        <strong>Username tidak boleh kosong</strong>
+        </div>";
+		$errorPassword = "<div class='alert alert-danger' role='alert'>
+        <strong>Password tidak boleh kosong</strong>
+        </div>";
 	}else{
-		$result = mysqli_query($con, "SELECT * FROM ramadan WHERE tbl_user='$nama' AND password='$password'");
+		$result = mysqli_query($con, "SELECT * FROM tbl_user WHERE nama='$nama' AND password='$password'");
 		$count = mysqli_num_rows($result);
 		
 		if($count > 0){
 			$data = mysqli_fetch_assoc($result);
 			
-			if($data['role'] == 'admin'){
+			if($data['level'] == 1){
+                $_SESSION['nik'] = $data['nik'];
 				$_SESSION['nama'] = $nama;
-				$_SESSION['role'] = "admin";
+				$_SESSION['divisi_bagian'] = $data['divisi_bagian'];
+				$_SESSION['alamat'] = $data['alamat'];
+				$_SESSION['no_tlp'] = $data['no_tlp'];
+				$_SESSION['level'] = "admin";
 				
-				echo "<script>alert('sukses');window.location.href = konten/dashboard.php';</script>";
-			}else if($data['role'] == 'user'){
+				echo "<script>alert('sukses login admin');window.location.href = 'konten/dashboard.php';</script>";
+			}else if($data['level'] == 0){
+                $_SESSION['nik'] = $data['nik'];
 				$_SESSION['nama'] = $nama;
-				$_SESSION['role'] = "user";
+				$_SESSION['divisi_bagian'] = $data['divisi_bagian'];
+				$_SESSION['alamat'] = $data['alamat'];
+				$_SESSION['no_tlp'] = $data['no_tlp'];
+				$_SESSION['level'] = "karyawan";
 				
-				echo "<script>alert('gagal');window.location.href = 'konten/dashboard.php';</script>";
+				echo "<script>alert('sukses login karyawan');window.location.href = 'konten/dashboard.php';</script>";
 			}else{
 				header("location.index.php?pesan=Gagal");
 			}
 		}else{
-			$errorData = "Data tidak terdaftar";
+			$errorData = "<div class='alert alert-danger' role='alert'>
+            <strong>Data tidak terdaftar</strong>
+            </div>";
 		}
 	}
 }
@@ -53,7 +66,7 @@ if(isset($_POST['login'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="assets/bootstrap.css">
-    <link href="image/logohero2.png" rel="shortcut icon"'>
+    <link href="image/logohero2.png" rel="shortcut icon">
 </head>
 <body class="bg-secondary">
     <div class="container">
@@ -67,20 +80,22 @@ if(isset($_POST['login'])){
                             &copy; Aplikasi Penitipan Barang 2020
                         </p>
                         <hr>
-                        <form action="" method="POST" >
+                        <form action="" method="POST">
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Username</label>
                                 <input type="text" class="form-control" id="exampleFormControlInput1" 
                                 placeholder="Username..." name="nama" >
-                                <span><?= $errornama; ?></span>
+                               
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Password</label>
-                                <input type="password" class="form-control" 
+                                <input type="password" class="form-control mb-3" 
                                 id="exampleFormControlInput1" placeholder="Password..." name="password">
+                                <span><?= $errornama; ?></span>
                                 <span><?= $errorPassword; ?></span>
+                                <span><?= $errorData; ?></span>
                             </div>
-                            <button type="button" class="btn btn-primary btn-block" name="login">Login</button>
+                            <button type="submit" class="btn btn-primary btn-block" name="login">Login</button>
                             <a href ="konten/register.php" class="btn btn-success btn-block">Register </a>
                             
                         </form>

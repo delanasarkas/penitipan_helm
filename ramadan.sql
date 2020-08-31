@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 31, 2020 at 11:13 PM
+-- Generation Time: Aug 31, 2020 at 11:51 PM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.28
+-- PHP Version: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -44,7 +43,8 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`Id`, `nik`, `nama`, `password`, `divisi_bagian`, `alamat`, `no_tlp`, `level`) VALUES
-(2, '222233344', 'RAMADAN SATRIA NUGRAHA', '123456', 'IT', 'JL KENARI RAYA BLOK AE 1 NO 22', '088833399', 0);
+(2, '222233344', 'RAMADAN SATRIA NUGRAHA', '123456', 'IT', 'JL KENARI RAYA BLOK AE 1 NO 22', '088833399', 0),
+(3, '-', 'adminhero', 'cc964674af6764f558f2053784fff6b1', 'admin', '-', '-', 1);
 
 -- --------------------------------------------------------
 
@@ -53,11 +53,10 @@ INSERT INTO `tbl_user` (`Id`, `nik`, `nama`, `password`, `divisi_bagian`, `alama
 --
 
 CREATE TABLE `users` (
-  `Id` int(11) NOT NULL,
-  `Nik` varchar(50) NOT NULL,
-  `Username` varchar(50) NOT NULL,
-  `Password` varchar(50) NOT NULL,
-  `Level` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `level` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -74,7 +73,7 @@ ALTER TABLE `tbl_user`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`Id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -84,13 +83,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
