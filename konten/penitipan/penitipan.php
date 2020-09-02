@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -222,6 +228,7 @@
                 </a>
                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Pesan Masuk</a>
               </div>
+              </li>
 
 
             <div class="topbar-divider d-none d-sm-block"></div>
@@ -237,7 +244,7 @@
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="../profile/profile.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Profile 
+                  Profile
                 </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -246,7 +253,7 @@
                 </a>
               </div>
             </li>
-
+            
           </ul>
 
         </nav>
