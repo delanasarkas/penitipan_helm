@@ -207,8 +207,9 @@ session_start();
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $_SESSION['level']; ?></span>
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?=$_SESSION['level'];?></span>
                 <i class="fas fa-user-cog"></i>
               </a>
               <!-- Dropdown - User Information -->
@@ -218,9 +219,9 @@ session_start();
                   Profile (<?= $_SESSION['nama']; ?>)
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="profile/logout.php" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Logout
+                  Logout 
                 </a>
               </div>
             </li>
@@ -372,7 +373,7 @@ session_start();
         <div class="modal-body">"APAKAH ANDA YAKIN MAU LOGOUT ?" </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="../index.php">Logout</a>
+          <a class="btn btn-primary" href="profile/logout.php">Logout</a>
         </div>
       </div>
     </div>
