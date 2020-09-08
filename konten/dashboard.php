@@ -3,6 +3,12 @@
 //MulaiSession
 session_start();
 
+
+
+if($_SESSION['akses'] == ""){
+	header("location:../index.php?pesan=belumLogin");
+}
+
 ?>
   
 <!DOCTYPE html>

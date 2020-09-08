@@ -35,8 +35,8 @@ if(isset($_POST['login'])){
 				$_SESSION['divisi_bagian'] = $data['divisi_bagian'];
 				$_SESSION['alamat'] = $data['alamat'];
 				$_SESSION['no_tlp'] = $data['no_tlp'];
-				$_SESSION['level'] = "admin";
-				
+                $_SESSION['level'] = "admin";
+                
 				echo "<script>alert('sukses login admin');window.location.href = 'konten/dashboard.php';</script>";
 			}else if($data['level'] == 0){
                 $_SESSION['nik'] = $data['nik'];
@@ -44,8 +44,8 @@ if(isset($_POST['login'])){
 				$_SESSION['divisi_bagian'] = $data['divisi_bagian'];
 				$_SESSION['alamat'] = $data['alamat'];
 				$_SESSION['no_tlp'] = $data['no_tlp'];
-				$_SESSION['level'] = "karyawan";
-				
+                $_SESSION ['level'] = "karyawan";
+
 				echo "<script>alert('sukses login karyawan');window.location.href = 'konten/dashboard.php';</script>";
 			}else{
 				header("location.index.php?pesan=Gagal");

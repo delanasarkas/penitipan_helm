@@ -3,6 +3,7 @@
 //MulaiSession
 session_start();
 
+
 ?>
 
 <!DOCTYPE html>
@@ -258,7 +259,6 @@ session_start();
                 aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?=$_SESSION['level'];?> </span>
                 <i class="fas fa-user-cog"></i>
-  
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
