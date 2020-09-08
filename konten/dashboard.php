@@ -69,14 +69,15 @@ session_start();
           <span>DATA PENITIPAN </span>
         </a>
       </li>
-
+	  <?php if($_SESSION['level']=='admin') { ?>
       <!-- Nav Item - DATA LOKER -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="loker/loker.php">
         <i class="fas fa-door-closed"></i>
           <span>DATA LOKER</span>
         </a>
-      
+      </li>
+	  <?php } ?>
       <!-- Nav Item -DATA PENGAMBILAN  -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="pengambilan/pengambilan.php">
