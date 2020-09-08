@@ -3,10 +3,7 @@
 //MulaiSession
 session_start();
 
-?>
-
-
-if($_SESSION['akses'] == ""){
+if(empty($_SESSION['level'])){
 	header("location:../index.php?pesan=belumLogin");
 }
 
@@ -83,22 +80,13 @@ if($_SESSION['akses'] == ""){
       </li>
 	  <?php if($_SESSION['level']=='admin') { ?>
       <!-- Nav Item - DATA LOKER -->
-      <?php
-
-      if($_SESSION['level']=='admin'){ ?>
-
       <li class="nav-item">
         <a class="nav-link collapsed" href="loker/loker.php">
         <i class="fas fa-door-closed"></i>
           <span>DATA LOKER</span>
         </a>
       </li>
-<<<<<<< HEAD
-	  <?php } ?>
-=======
       <?php } ?>
-
->>>>>>> cc6f5b2b2a5415ea95fc918e25f899487647858e
       <!-- Nav Item -DATA PENGAMBILAN  -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="pengambilan/pengambilan.php">
