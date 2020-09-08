@@ -1,6 +1,8 @@
 <?php
 
+//MulaiSession
 session_start();
+
 
 ?>
 
@@ -68,11 +70,17 @@ session_start();
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
+      <?php 
+      
+      if($_SESSION['level']=='admin'){ ?>
+
       <li class="nav-item active">
         <a class="nav-link" href="../dashboard.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span> Dashboard</span></a>
+          <span> Dashboard</span>
+          </a>
       </li>
+      <?php } ?>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -86,16 +94,21 @@ session_start();
       <li class="nav-item">
         <a class="nav-link collapsed" href="penitipan.php">
           <i class="fas fa-server"></i>
-          <span>DATA PENITIPAN </span>
+          <span>DATA PENITIPAN </span>  
         </a>
       </li>
 
       <!-- Nav Item - DATA LOKER -->
+      <?php 
+      
+      if($_SESSION['level']=='admin'){ ?>
       <li class="nav-item">
         <a class="nav-link collapsed" href="../loker/loker.php">
         <i class="fas fa-door-closed"></i>
           <span>DATA LOKER</span>
         </a>
+      </li>
+      <?php } ?>
 
       <!-- Nav Item -DATA PENGAMBILAN  -->
       <li class="nav-item">
@@ -106,21 +119,28 @@ session_start();
       </li>
 
       <!-- Nav Item - laporan Data -->
+      <?php 
+      
+      if($_SESSION['level']=='admin'){ ?>
       <li class="nav-item">
         <a class="nav-link collapsed" href="../laporandata/laporandata.php">
           <i class="fas fa-chalkboard-teacher"></i>
           <span>LAPORAN DATA</span>
         </a>
       </li>
+      <?php } ?>
 
       <!-- Nav Item - MANAGEMENT USER -->
+      <?php 
+      
+      if($_SESSION['level']=='admin'){ ?>
       <li class="nav-item">
         <a class="nav-link collapsed" href="../managementuser/managementuser.php">
           <i class="fas fa-book-open"></i>
           <span>MANAGEMENT USER</span>
         </a>
-
       </li>
+      <?php } ?>
 
     </ul>
     <!-- End of Sidebar -->
@@ -237,14 +257,14 @@ session_start();
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?=$_SESSION['level'];?> </span>
                 <i class="fas fa-user-cog"></i>
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="../profile/profile.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Profile
+                  Profile (<?= $_SESSION['nama']; ?>)
                 </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -262,6 +282,9 @@ session_start();
         <!-- Begin Page Content -->
         <div class="container-fluid">
           <!-- Page Data Penitipan,search,cetak report, Tambah Data -->
+          <?php 
+      
+          if($_SESSION['level']=='admin'){ ?>
           <div class="d-sm-flex justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800 "> DATA PENITIPAN </h1>
             <a href="#" class="d-none d-sm-inline-block btn btn-sms btn-primary shadow-sm"
@@ -269,6 +292,7 @@ session_start();
             <a href="tambahpenitipan.php" class="d-none d-sm-inline-block btn btn-sms btn-primary"><i
                 class="fas fa-plus fa-sm text-white-50"></i> Tambah Data</a>
           </div>
+          <?php } ?>
 
           <!-- Page Table Penitipan -->
           <div class="row">
@@ -302,14 +326,23 @@ session_start();
                     <td style="border:1px solid black">Sedang dititip</td>
                     <td style="border:1px solid black">
 
+                      <?php 
+
+                      if($_SESSION['level']=='admin') { ?>
+
                       <a href="editpenitipan.php" class="btn btn-sms btn-primary btn-sm"></i> Edit</a>
                       <a href="#" class="btn btn-sms btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal"></i> Hapus</a>
+                      
+                      <?php } ?>
+
                       <a href="detailpenitipan.php" class="btn btn-sms btn-success btn-sm"></i> Detail</a>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
+
+            
 
             <!-- Pie Chart -->
             <div class="col-xl-12 col-lg-5">

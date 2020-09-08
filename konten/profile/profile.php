@@ -2,8 +2,8 @@
 
 include("../../koneksi/koneksi.php");
 
-
-
+//MulaiSession
+session_start();
 
 ?>
 
@@ -52,11 +52,16 @@ include("../../koneksi/koneksi.php");
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
+      <?php
+
+      if($_SESSION['level']=='admin') { ?>
       <li class="nav-item active">
         <a class="nav-link" href="../dashboard.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span> Dashboard</span></a>
       </li>
+
+      <?php } ?>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -75,11 +80,16 @@ include("../../koneksi/koneksi.php");
       </li>
 
       <!-- Nav Item - DATA LOKER -->
+      <?php
+
+      if($_SESSION['level']=='admin') { ?>
       <li class="nav-item">
         <a class="nav-link collapsed" href="../loker/loker.php">
         <i class="fas fa-door-closed"></i>
           <span>DATA LOKER</span>
         </a>
+      </li>
+      <?php } ?>
 
 
       <!-- Nav Item -DATA PENGAMBILAN -->
@@ -91,6 +101,9 @@ include("../../koneksi/koneksi.php");
       </li>
 
       <!-- Nav Item - laporan Data -->
+      <?php
+
+      if($_SESSION['level']=='admin') { ?>
       <li class="nav-item">
         <a class="nav-link collapsed" href="../laporandata/laporandata.php">
           <i class="fas fa-chalkboard-teacher"></i>
@@ -98,14 +111,20 @@ include("../../koneksi/koneksi.php");
         </a>
       </li>
 
+      <?php } ?>
+
       <!-- Nav Item - MANAGEMENT USER -->
+      <?php
+
+      if($_SESSION['level']=='admin') { ?>
       <li class="nav-item">
         <a class="nav-link collapsed" href="../managementuser/managementuser.php">
           <i class="fas fa-book-open"></i>
           <span>MANAGEMENT USER</span>
         </a>
-
       </li>
+
+      <?php } ?>
 
     </ul>
     <!-- End of Sidebar -->
@@ -222,13 +241,14 @@ include("../../koneksi/koneksi.php");
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">(<?=$_SESSION['level']; ?>)</span>
                 <i class="fas fa-user-cog"></i>
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="profile.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile (<?=$_SESSION['nama']; ?>)
                 </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">

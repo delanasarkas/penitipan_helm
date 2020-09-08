@@ -5,6 +5,13 @@ session_start();
 
 ?>
 
+
+if($_SESSION['akses'] == ""){
+	header("location:../index.php?pesan=belumLogin");
+}
+
+?>
+  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,18 +55,23 @@ session_start();
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
+      <?php 
+      
+      if($_SESSION['level']=='admin'){ ?>
+
       <li class="nav-item active">
         <a class="nav-link" href="dashboard.php">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span>
+          </a>
       </li>
+      <?php } ?> 
 
       <!-- Divider -->
       <hr class="sidebar-divider">
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        
       </div>
 
       <!-- Nav Item -DATA PENITIPAN  -->
@@ -71,13 +83,22 @@ session_start();
       </li>
 	  <?php if($_SESSION['level']=='admin') { ?>
       <!-- Nav Item - DATA LOKER -->
+      <?php
+
+      if($_SESSION['level']=='admin'){ ?>
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="loker/loker.php">
         <i class="fas fa-door-closed"></i>
           <span>DATA LOKER</span>
         </a>
       </li>
+<<<<<<< HEAD
 	  <?php } ?>
+=======
+      <?php } ?>
+
+>>>>>>> cc6f5b2b2a5415ea95fc918e25f899487647858e
       <!-- Nav Item -DATA PENGAMBILAN  -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="pengambilan/pengambilan.php">
@@ -87,21 +108,30 @@ session_start();
       </li>
 
       <!-- Nav Item - laporan Data -->
+      <?php
+
+      if($_SESSION['level']=='admin'){ ?>
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="laporandata/laporandata.php">
         <i class="fas fa-chalkboard-teacher"></i>
           <span>LAPORAN DATA</span>
         </a>
       </li>
+      <?php } ?>
 
        <!-- Nav Item - MANAGEMENT USER -->
+       <?php
+
+       if($_SESSION['level']=='admin'){ ?>
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="managementuser/managementuser.php" >
         <i class="fas fa-book-open"></i>
           <span>MANAGEMENT USER</span>
         </a>
-
       </li>
+       <?php } ?>
 
     </ul>
     <!-- End of Sidebar -->
